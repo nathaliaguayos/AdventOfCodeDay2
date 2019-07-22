@@ -1,4 +1,4 @@
-# Day 1: Chronal Calibration
+# Day 2: Inventory Management System
 
 This project is named "InventoryMgmtSystem" and is based on the [Advent Of Code](https://adventofcode.com) challenge of [Day 2: Inventory Management System](https://adventofcode.com/2018/day/2), you should now that is a C# solution created in Visual Studio. The Visual Studio solution has 2 projects, the first one is the main project, is where the code to solve the challenge lives, this one is called "InventoryMgmtSystem", the second one is where the Unit Tests for the main project were created, this is called "InventoryMgmtSystem_Tests". 
 

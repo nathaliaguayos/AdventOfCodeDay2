@@ -11,7 +11,8 @@ namespace InventoryMgmtSystem
         static void Main(string[] args)
         {
             InventoryChecksum inventoryChecksum = new InventoryChecksum();
-            String[] boxIDs = new string[7]{ "abcdef", "bababc", "abbcde", "abcccd", "aabcdd", "abcdee", "ababab" };            
+            //String[] boxIDs = new string[7]{ "abcdef", "bababc", "abbcde", "abcccd", "aabcdd", "abcdee", "ababab" };            
+            String[] boxIDs = Properties.Resources.Input.Split('\n');
             var idRep = inventoryChecksum.Checksum(boxIDs);
             Console.WriteLine("The checksum is: " + idRep.idWithTwo + " X " + idRep.idWithThree + " = " + (idRep.idWithTwo * idRep.idWithThree));
 

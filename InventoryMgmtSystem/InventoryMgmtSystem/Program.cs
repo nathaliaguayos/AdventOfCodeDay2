@@ -10,12 +10,15 @@ namespace InventoryMgmtSystem
     {
         static void Main(string[] args)
         {
-            InventoryChecksum inventoryChecksum = new InventoryChecksum();
-            //String[] boxIDs = new string[7]{ "abcdef", "bababc", "abbcde", "abcccd", "aabcdd", "abcdee", "ababab" };            
+            InventoryChecksum warehouseInventory = new InventoryChecksum();
+            PrototypeFinder prototypeFinder = new PrototypeFinder();
             String[] boxIDs = Properties.Resources.Input.Split('\n');
-            var idRep = inventoryChecksum.Checksum(boxIDs);
-            Console.WriteLine("The checksum is: " + idRep.idWithTwo + " X " + idRep.idWithThree + " = " + (idRep.idWithTwo * idRep.idWithThree));
+            var idRep = warehouseInventory.Checksum(boxIDs);
 
+            Console.WriteLine("====== Day 2: Inventory Management System ======\n\nPart 1");
+            Console.WriteLine("The checksum is: " + idRep.idWithTwo + " X " + idRep.idWithThree + " = " + (idRep.idWithTwo * idRep.idWithThree));
+            Console.WriteLine("\n\nPart 2");
+            Console.WriteLine(prototypeFinder.GetBoxesWithSimilarId(boxIDs));
             Console.Read();
         }
     }

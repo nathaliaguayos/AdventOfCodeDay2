@@ -52,8 +52,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InventoryChecksumTests.cs" />
+    <Compile Include="InventoryChecksum\InventoryChecksumTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PrototypeFinder\PrototypeFinderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryMgmtSystem
 {
@@ -11,15 +8,12 @@ namespace InventoryMgmtSystem
         /// <summary>
         /// Author: Nathali Aguayo
         /// Description: This program was created to solve the "Day 2: Inventory Management System" challenge.
-        /// You just need to click on "Start" button and see how it works! 
         /// </summary>
         /// <param name="boxIDs"></param>
         /// <returns>Repetitions</returns>
         public Repetitions Checksum(String[] boxIDs)
         {
             Repetitions repetitions = new Repetitions();
-            Boolean flagForRepWith2 = false;
-            Boolean flagForRepWith3 = false;
 
             for (int boxId = 0; boxId < boxIDs.Length; boxId++)
             {
@@ -28,7 +22,7 @@ namespace InventoryMgmtSystem
                 for (int id = 0; id < boxIDs[boxId].Length; id++)
                 {
                     var character = boxIDs[boxId][id].ToString();
-                    if (idSummary.ContainsKey(character))
+                    if (idSummary.ContainsKey(character)) //if is duplicate
                     {
                         idSummary[character]++;
                     }
@@ -37,30 +31,14 @@ namespace InventoryMgmtSystem
                         idSummary.Add(character, 1);
                     }
                 }
-                foreach (var entry in idSummary)
+                if (idSummary.ContainsValue(2))// if appears exactly twice 
                 {
-                    switch (entry.Value)
-                    {
-                        case 2:
-                            if (!flagForRepWith2)
-                            {
-                                repetitions.idWithTwo += 1;
-                            }
-                            flagForRepWith2 = true;
-                            break;
-                        case 3:
-                            if (!flagForRepWith3)
-                            {
-                                repetitions.idWithThree += 1;
-                            }
-                            flagForRepWith3 = true;
-                            break;
-                        default:
-                            break;
-                    }
+                    repetitions.idWithTwo += 1;
                 }
-                flagForRepWith2 = false;
-                flagForRepWith3 = false;
+                if (idSummary.ContainsValue(3))// if appears exactly three times
+                {
+                    repetitions.idWithThree += 1;
+                }
             }
             return repetitions;
         }

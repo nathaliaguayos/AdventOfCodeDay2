@@ -26,16 +26,19 @@ Now I'm going to tell you how you can run the application and explain a little t
 1. Open the "InventoryMgmtSystem" solution. 
 2. Select "Program" Class.
 3. Notice that the main class is there in this method, and there is an array preconfigured with the values indicated in the [challenge](https://adventofcode.com/2018/day/2) sample. 
-4. Click on the "Run" button and you will get a result in the console.
+4. Click on the "Run" button and you will get a result in the console for both parts of the challenge.
+
+**Note:** Notice that there are 2 more classes in addition the *Program.cs*. The first one *"InventoryChecksum"* is to solve the first part of the challenge; the second one *"PrototypeFinder"* is to solve the second part. 
 
 ## Running the tests
 
 To run the test is similar to run the application, with a difference that we need to open our "Test Explorer" view, please make sure that you have it opened and then follow the next instructions:
 
-1. Open the "InventoryMgmtSystem_Tests" project.
-2. Select the "InventoryChecksumTests" Class. Notice that in this class we have some test methods, and each of them have different values to test. 
+1. Open the "InventoryMgmtSystem_Tests" project, notice that there are 2 folders; *InventoryChecksum* which stores the tests for the first part of the challenge and the other is *PrototypeFinder* which contains the tests for the second part.
+2. Select whatever of the 2 Classes. Notice that inside the class there are some test methods, and each of them has different values to test. 
 3. In the Test Explorer window, we can do a right-click over the "InventoryMgmtSystem_Tests" and select "Run the selected Tests".
 4. Wait until the Unit Tests run to see the Test results, all of them should be "passed".
+
 
 **NOTE:** *I used scenarios similar to the challenge sample to create the unit tests, but those are not the only scenarios, they could be more.
 
